@@ -1,0 +1,151 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Colonne de gauche avec image de fond */
+.recette-container {
+    flex: 2;
+    padding: 20px;
+    background: url('../food.jpg') no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+}
+
+/* Fond noir semi-transparent pour améliorer la lisibilité */
+.recette-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fond sombre semi-transparent */
+    z-index: 1;
+}
+
+.recette-container * {
+    position: relative;
+    z-index: 2; /* Place les textes au-dessus du fond */
+}
+
+.recette-container h1 {
+    font-size: 2.5rem;
+    color: #7CFC00; /* Vert clair */
+    margin-bottom: 20px;
+}
+
+.recette-container ul {
+    list-style: square;
+    margin: 20px 0;
+    padding-left: 30PX;
+}
+
+.recette-container li {
+    margin-bottom: 10px;
+    color: #ffffff; /* Blanc */
+}
+
+.recette-container p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #e0e0e0; /* Gris clair */
+}
+
+/* Colonne de droite : Formulaire */
+.comment-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    color: #333;
+}
+
+.comment-container h2 {
+    margin-bottom: 15px;
+    color: #4CAF50; /* Vert moderne */
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+textarea, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border-color: #7CFC00; /* Vert clair */
+}
+
+button {
+    display: inline-block;
+    width: 100%;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+    transition: all 0.3s;
+}
+
+/* Confirmation Box */
+.confirmation-box {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 500px;
+    background: #f4f4f4;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-box h1 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.confirmation-box p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
